@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website Creation Guide</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: darkblue;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px 0;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML Content -->
+  <header>
+    <h1>Learn Simple Website Creation</h1>
+    <p>Follow this guide to learn HTML, CSS, and JavaScript basics with examples.</p>
+  </header>
+
+  <section id="html-section">
+    <h2>HTML Examples</h2>
+    <ul>
+      <li><b>Headings:</b> <code>&lt;h1&gt; to &lt;h6&gt;</code></li>
+      <p>Example:</p>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+
+      <li><b>Paragraph:</b> <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></li>
+      <p>This is a paragraph.</p>
+
+      <li><b>Links:</b> <code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></li>
+      <p><a href="https://example.com" target="_blank">Visit Example</a></p>
+
+      <li><b>Images:</b> <code>&lt;img src="https://via.placeholder.com/150" alt="Placeholder Image"&gt;</code></li>
+      <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+      <li><b>Lists:</b> <code>&lt;ul&gt; &lt;li&gt;Item&lt;/li&gt; &lt;/ul&gt;</code></li>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </ul>
+  </section>
+
+  <section id="css-section">
+    <h2>CSS Examples</h2>
+    <p>Click the buttons below to see CSS effects:</p>
+    <button id="changeColor">Change Background Color</button>
+    <button id="changeFontSize">Increase Font Size</button>
+    <button id="changePadding">Add Padding</button>
+    <button id="changeBorder">Add Border</button>
+    <button id="changeTextStyle">Change Text Style</button>
+  </section>
+
+  <section id="js-section">
+    <h2>JavaScript Examples</h2>
+    <p>Click the buttons below to see JavaScript in action:</p>
+    <button id="showAlert">Show Alert</button>
+    <button id="changeContent">Change Content Text</button>
+    <button id="toggleVisibility">Toggle Visibility</button>
+    <button id="calculateSum">Calculate Sum (2 + 3)</button>
+    <button id="addListItem">Add List Item</button>
+    <ul id="dynamicList">
+      <li>Original Item</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2024 Simple Website Creation Guide</p>
+  </footer>
+
+  <script>
+    // JavaScript Code
+
+    // CSS Examples
+    document.getElementById('changeColor').addEventListener('click', function() {
+      document.body.style.backgroundColor = '#e0f7fa';
+    });
+
+    document.getElementById('changeFontSize').addEventListener('click', function() {
+      document.querySelector('h1').style.fontSize = '3em';
+    });
+
+    document.getElementById('changePadding').addEventListener('click', function() {
+      document.querySelector('section').style.padding = '40px';
+    });
+
+    document.getElementById('changeBorder').addEventListener('click', function() {
+      document.querySelector('section').style.border = '2px solid #007bff';
+    });
+
+    document.getElementById('changeTextStyle').addEventListener('click', function() {
+      document.querySelector('h1').style.fontStyle = 'italic';
+    });
+
+    // JavaScript Examples
+    document.getElementById('showAlert').addEventListener('click', function() {
+      alert('Hello! This is an alert message.');
+    });
+
+    document.getElementById('changeContent').addEventListener('click', function() {
+      document.querySelector('#html-section p').textContent = 'The content has been changed using JavaScript!';
+    });
+
+    document.getElementById('toggleVisibility').addEventListener('click', function() {
+      const section = document.getElementById('css-section');
+      if (section.style.display === 'none') {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+
+    document.getElementById('calculateSum').addEventListener('click', function() {
+      const sum = 2 + 3;
+      alert(`The sum of 2 + 3 is: ${sum}`);
+    });
+
+    document.getElementById('addListItem').addEventListener('click', function() {
+      const newItem = document.createElement('li');
+      newItem.textContent = 'New Item Added';
+      document.getElementById('dynamicList').appendChild(newItem);
+    });
+  </script>
+</body>
+</html>

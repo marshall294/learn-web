@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching Page: Animated Portfolio Website</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* CSS Styling for the Teaching Page */
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  h1 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: #3498db;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .demo, .code-display {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .demo {
+    text-align: center;
+  }
+  .nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+  }
+  .nav a:hover {
+    color: #3498db;
+  }
+  .hero {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    animation: slideIn 1.5s ease-in-out;
+  }
+  .about, .projects {
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  .projects {
+    background-color: #ecf0f1;
+  }
+  .project {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  pre {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #e74c3c;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Learn How to Create an Animated Portfolio Website</h1>
+
+    <!-- Live Demo Section -->
+    <div class="demo">
+      <h2>Live Demo: Animated Portfolio Website</h2>
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="hero">
+        <h2>Welcome to My Animated Portfolio</h2>
+        <p>I am a passionate developer who loves creating engaging web experiences.</p>
+      </div>
+      <div class="about">
+        <h3>About Me</h3>
+        <p>I specialize in creating modern and responsive websites with a focus on performance and user experience.</p>
+      </div>
+      <div class="projects">
+        <h3>My Projects</h3>
+        <div class="project">
+          <h4>Project 1</h4>
+          <p>A responsive website built with HTML, CSS, and JavaScript animations.</p>
+        </div>
+        <div class="project">
+          <h4>Project 2</h4>
+          <p>A web application using React.js and Node.js.</p>
+        </div>
+        <div class="project">
+          <h4>Project 3</h4>
+          <p>Interactive landing page with stunning animations.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <!-- Code Display Section -->
+    <div class="code-display">
+      <h2>Complete Code for Animated Portfolio Website</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Animated Portfolio Website&lt;/title&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+&lt;style&gt;
+/* CSS Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+.nav {
+  background-color: #2c3e50;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 20px;
+  transition: color 0.3s ease;
+}
+.nav a:hover {
+  color: #3498db;
+}
+.hero {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+.about, .projects {
+  padding: 40px 20px;
+  text-align: center;
+}
+.projects {
+  background-color: #ecf0f1;
+}
+.project {
+  display: inline-block;
+  width: 30%;
+  margin: 15px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="nav"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;a href="#"&gt;Projects&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="hero"&gt;
+    &lt;h2&gt;Welcome to My Animated Portfolio&lt;/h2&gt;
+    &lt;p&gt;I am a passionate developer who loves creating engaging web experiences.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="about"&gt;
+    &lt;h3&gt;About Me&lt;/h3&gt;
+    &lt;p&gt;I specialize in creating modern and responsive websites with a focus on performance and user experience.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="projects"&gt;
+    &lt;h3&gt;My Projects&lt;/h3&gt;
+    &lt;div class="project"&gt;
+      &lt;h4&gt;Project 1&lt;/h4&gt;
+      &lt;p&gt;A responsive website built with HTML, CSS, and JavaScript animations.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="project"&gt;
+      &lt;h4&gt;Project 2&lt;/h4&gt;
+      &lt;p&gt;A web application using React.js and Node.js.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="project"&gt;
+      &lt;h4&gt;Project 3&lt;/h4&gt;
+      &lt;p&gt;Interactive landing page with stunning animations.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="footer"&gt;
+    &lt;p&gt;&amp;copy; 2024 My Portfolio. All Rights Reserved.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+  </div>
+</body>
+</html>

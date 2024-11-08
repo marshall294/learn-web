@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching Page: Greeting Website Creation</title>
+<style>
+  /* Styling for the entire page */
+  body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  h1 {
+    text-align: center;
+    color: #1e90ff;
+  }
+  .demo, .code-display {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .demo {
+    text-align: center;
+  }
+  input {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 10px;
+    border: 2px solid #1e90ff;
+    border-radius: 5px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #4682b4;
+  }
+  #greetingMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6347;
+  }
+  pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #d9534f;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Learn How to Create a Greeting Website</h1>
+
+    <!-- Live Demo Section -->
+    <div class="demo">
+      <h2>Live Demo</h2>
+      <p>Enter a friend's or family member's name below:</p>
+      <input type="text" id="nameInput" placeholder="Enter a name">
+      <button id="greetButton">Send Greeting</button>
+      <h2 id="greetingMessage"></h2>
+    </div>
+
+    <!-- Code Display Section -->
+    <div class="code-display">
+      <h2>HTML Code</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Greeting Friends and Family&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Greeting Page for Friends and Family&lt;/h1&gt;
+  &lt;input type="text" id="nameInput" placeholder="Enter a name"&gt;
+  &lt;button id="greetButton"&gt;Send Greeting&lt;/button&gt;
+  &lt;h2 id="greetingMessage"&gt;&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <h2>CSS Code</h2>
+      <pre><code>body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+}
+input {
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #1e90ff;
+  border-radius: 5px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+  border-radius: 5px;
+}
+#greetingMessage {
+  color: #ff6347;
+  font-size: 18px;
+}</code></pre>
+
+      <h2>JavaScript Code</h2>
+      <pre><code>function greetUser() {
+  const nameInput = document.getElementById("nameInput").value.trim();
+  const greetingMessage = document.getElementById("greetingMessage");
+  if (nameInput) {
+    greetingMessage.textContent = `Hello, ${nameInput}! Have a wonderful day!`;
+  } else {
+    greetingMessage.textContent = "Please enter a name to greet!";
+  }
+}
+document.getElementById("greetButton").addEventListener("click", greetUser);</code></pre>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript Functionality
+    function greetUser() {
+      const nameInput = document.getElementById("nameInput").value.trim();
+      const greetingMessage = document.getElementById("greetingMessage");
+
+      if (nameInput) {
+        greetingMessage.textContent = `Hello, ${nameInput}! Have a wonderful day!`;
+      } else {
+        greetingMessage.textContent = "Please enter a name to greet!";
+      }
+
+      // Clear input field
+      document.getElementById("nameInput").value = "";
+    }
+
+    // Add event listener to the button
+    document.getElementById("greetButton").addEventListener("click", greetUser);
+  </script>
+</body>
+</html>

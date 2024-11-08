@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website Creation Guide</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
+    }
+
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: darkblue;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML Content -->
+  <header>
+    <h1>Learn Simple Website Creation</h1>
+    <p>Follow this guide to learn HTML, CSS, and JavaScript basics.</p>
+  </header>
+
+  <section id="html-section">
+    <h2>HTML Section</h2>
+    <p>HTML (HyperText Markup Language) is used to create the structure of a webpage.</p>
+    <p>Example: &lt;h1&gt;Hello, World!&lt;/h1&gt;</p>
+    <h1>Example Heading</h1>
+  </section>
+
+  <section id="css-section">
+    <h2>CSS Section</h2>
+    <p>CSS (Cascading Style Sheets) is used to style the HTML content.</p>
+    <p>Example: <code>h1 { color: red; }</code></p>
+    <button id="colorButton">Change Heading Color</button>
+  </section>
+
+  <section id="js-section">
+    <h2>JavaScript Section</h2>
+    <p>JavaScript is used to add interactivity to a webpage.</p>
+    <p>Example: <code>document.querySelector('h1').textContent = 'Hello, JavaScript!';</code></p>
+    <button id="textButton">Change Heading Text</button>
+  </section>
+
+  <footer>
+    <p>© 2024 Simple Website Creation Guide</p>
+  </footer>
+
+  <script>
+    // JavaScript Code
+
+    // Change Heading Color on Button Click
+    document.getElementById('colorButton').addEventListener('click', function() {
+      document.querySelector('h1').style.color = 'red';
+    });
+
+    // Change Heading Text on Button Click
+    document.getElementById('textButton').addEventListener('click', function() {
+      document.querySelector('h1').textContent = 'Hello, JavaScript!';
+    });
+  </script>
+</body>
+</html>

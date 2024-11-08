@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Website Creation Guide</title>
+<style>
+  /* CSS EXAMPLES */
+  /* Example 1: Basic Styling */
+  body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  h1 {
+    color: #1e90ff;
+    text-align: center;
+  }
+  h2 {
+    color: #ff6347;
+  }
+  p {
+    color: #555;
+  }
+
+  /* Example 2: Link Styling */
+  a {
+    color: #ff4500;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #32cd32;
+  }
+
+  /* Example 3: Flexbox Layout */
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  .flex-item {
+    width: 100px;
+    height: 100px;
+    background-color: #87cefa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  /* Example 4: Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Example 5: Button Styling with Transition */
+  .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<h1>Step-by-Step Guide to Simple Website Creation</h1>
+
+<!-- HTML EXAMPLES -->
+<!-- Example 1: Headings and Paragraphs -->
+<h2>1. HTML Headings and Paragraphs</h2>
+<p>This is a paragraph demonstrating basic HTML structure.</p>
+
+<!-- Example 2: Links and Images -->
+<h2>2. Links and Images</h2>
+<p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more info.</p>
+<img src="9.avif" alt="Placeholder Image">
+
+<!-- Example 3: Lists -->
+<h2>3. Unordered and Ordered Lists</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+<ol>
+  <li>Plan your website</li>
+  <li>Design the layout</li>
+  <li>Code the structure</li>
+</ol>
+
+<!-- Example 4: Table -->
+<h2>4. Basic Table</h2>
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Goals</th>
+    <th>Assists</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>10</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Alex</td>
+    <td>8</td>
+    <td>6</td>
+  </tr>
+</table>
+
+<!-- Example 5: Form -->
+<h2>5. Simple Form</h2>
+<form id="contactForm">
+  <label for="username">Name:</label>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <button type="button" class="btn" onclick="submitForm()">Submit</button>
+</form>
+
+<!-- Flexbox Layout -->
+<h2>Flexbox Example</h2>
+<div class="flex-container">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+</div>
+
+<!-- JavaScript EXAMPLES -->
+<script>
+  // Example 1: Display Alert
+  alert("Welcome to the Simple Website Creation Guide!");
+
+  // Example 2: Console Log
+  console.log("This is a console log message for debugging.");
+
+  // Example 3: Button Click Event
+  document.querySelector('.btn').addEventListener('click', function() {
+    console.log("Button clicked!");
+  });
+
+  // Example 4: Dynamic Text Change
+  function submitForm() {
+    const name = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    if (name && email) {
+      alert(`Thank you, ${name}! We have received your email: ${email}`);
+      document.getElementById('contactForm').reset();
+    } else {
+      alert("Please fill out all fields.");
+    }
+  }
+
+  // Example 5: Simple Calculator
+  const num1 = 10;
+  const num2 = 20;
+  const sum = num1 + num2;
+  console.log(`The sum of ${num1} and ${num2} is ${sum}`);
+</script>
+
+</body>
+</html>
