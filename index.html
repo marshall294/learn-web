@@ -27,6 +27,32 @@
       font-size: 36px;
       animation: fadeIn 2s ease-in-out;
     }
+    /* Fixed Blinking Button Styles */
+    .blinking-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #e74c3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      animation: blink 1.5s infinite alternate;
+      position: fixed;
+      top: 20px;
+      left: 90%;
+      transform: translateX(-50%);
+      z-index: 9999;
+    }
+    .blinking-button:hover {
+      background-color: #c0392b;
+    }
+    @keyframes blink {
+      0% { background-color: #e74c3c; }
+      50% { background-color: #f39c12; }
+      100% { background-color: #3498db; }
+    }
+
     .container {
       max-width: 1200px;
       margin: 30px auto;
@@ -134,15 +160,28 @@
         opacity: 1;
       }
     }
-    
+
+    /* Date & Time Display */
+    .datetime {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Fixed Blinking "Join Live Class" Button -->
+  <a href="https://meet.google.com/tue-ytfd-uir" class="blinking-button" target="_blank">Join Live Class</a>
 
   <!-- Header -->
   <header>
     MathCloud Website Tutorial
   </header>
+
+  <!-- Current Date and Time -->
+  <div class="datetime" id="datetime"></div>
 
   <!-- Main Container -->
   <div class="container">
@@ -187,17 +226,48 @@
       </a>
     </div>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/+2348102341648" class="whatsapp-button" target="_blank">Send Comments via WhatsApp</a>
+<!-- Comments Section -->
+<div class="comments-section">
+  <h3>Leave a Comment</h3>
+  <input type="text" id="senderName" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+  <textarea id="commentText" placeholder="Write your comment here..." style="width: 100%; height: 100px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+  <button onclick="sendToWhatsApp()">Send Comment</button>
+</div>
 
-    <!-- Comments Section -->
-    <div class="comments-section">
-      <h3>Leave a Comment</h3>
-      <textarea placeholder="Write your comment here..."></textarea>
-      <br>
-      <button onclick="alert('Thank you for your comment!')">Submit Comment</button>
-    </div>
-  </div>
+
+  <script>
+    // Function to display current date and time
+    function updateDateTime() {
+      var now = new Date();
+      var date = now.toLocaleDateString();
+      var time = now.toLocaleTimeString();
+      document.getElementById('datetime').textContent = date + ' ' + time;
+    }
+
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
+  function sendToWhatsApp() {
+    const senderName = document.getElementById('senderName').value.trim();
+    const commentText = document.getElementById('commentText').value.trim();
+
+    if (senderName === "" || commentText === "") {
+      alert("Please enter both your name and comment.");
+      return;
+    }
+
+    // WhatsApp number
+    const phoneNumber = "+2348102341648";
+
+    // Construct the WhatsApp message
+    const message = `Hello, my name is ${senderName}. Here's my comment:\n\n"${commentText}"`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp with the constructed message
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
 
 </body>
 </html>
